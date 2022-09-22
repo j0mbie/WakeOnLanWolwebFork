@@ -8,7 +8,8 @@ services:
     # make sure that the file exists in local directory from where you are running the compose file
     # Or, initialize empty json file by running command "echo '{}' > devices.json"
     volumes:
-      - ./wolweb:/wolweb
+      - ./devices.json:/wolweb/devices.json
+      - ./config.json:/wolweb/config.json
 
     # Have to use host mode as bridge network has issues with UDP broadcast
     # https://github.com/docker/for-linux/issues/637
@@ -20,4 +21,4 @@ services:
     #environment:
       #WOLWEBPORT: "8089"
       #WOLWEBVDIR: "/wolweb"
-      #WOLWEBBCASTIP: "192.168.1.255:9"
+      #WOLWEBBCASTIP: "10.101.0.255:9"
