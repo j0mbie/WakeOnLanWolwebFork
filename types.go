@@ -23,5 +23,5 @@ type AppData struct {
 type AppConfig struct {
 	Port    int    `json:"port" env:"WOLWEBPORT" env-default:"8089"`
 	VDir    string `json:"vdir" env:"WOLWEBVDIR" env-default:"/wolweb"`
-	BCastIP string `json:"bcastip" env:"WOLWEBBCASTIP" env-default:"192.168.1.255:9"`
+	BCastIP string `json:"bcastip" env:"WOLWEBBCASTIP" env-default:"172.27.142.255:9"`
 }
